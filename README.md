@@ -1,12 +1,12 @@
 <div align="center">
 
-<img
-  src="./assets/github-header-final.svg"
-  width="100%"
-  alt="Anirudh Jaiswal — AI Engineer, Web Developer, Analyst"
->
+<img src="./assets/github-header-final.svg"
+     width="100%"
+     alt="Anirudh Jaiswal — AI Engineer, Web Developer, Analyst">
 
 </div>
+
+---
 
 ---
 ---
