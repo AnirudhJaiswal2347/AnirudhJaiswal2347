@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" fill="none">
+  <title>Anirudh Jaiswal — animated AJ header</title>
+  <desc>Animated AJ monogram with electric blue ambient lines and personal branding.</desc>
+
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#58A6FF" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#58A6FF"/>
+      <stop offset="1" stop-color="#1F6FEB" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="frame">
+      <rect x="20" y="20" width="1160" height="380" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="420" rx="22" fill="#0D1117"/>
+
+  <!-- Ambient technical grid -->
+  <g clip-path="url(#frame)" opacity="0.28" stroke="#58A6FF" stroke-width="1">
+    <path d="M-100 335 H1300" stroke-dasharray="3 13">
+      <animate attributeName="stroke-dashoffset" values="0;-64" dur="8s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M-100 85 H1300" stroke-dasharray="2 18">
+      <animate attributeName="stroke-dashoffset" values="0;80" dur="11s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M140 20 V400 M300 20 V400 M900 20 V400 M1060 20 V400"
+          stroke-dasharray="2 14">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0 0;8 0;0 0"
+        dur="9s"
+        repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Slow moving accent lines -->
+  <g opacity="0.7">
+    <path d="M120 90 H390" stroke="url(#blue)" stroke-width="2">
+      <animate attributeName="x1" values="120;180;120" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="390;450;390" dur="6s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M810 330 H1080" stroke="url(#blue)" stroke-width="2">
+      <animate attributeName="x1" values="810;750;810" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1080;1020;1080" dur="7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- AJ: exact geometry supplied by Anirudh -->
+  <g transform="translate(440 52)"
+     stroke="#F4F4F4"
+     stroke-width="24"
+     stroke-linecap="butt"
+     stroke-linejoin="miter">
+    <path d="M38 182 L128 30 L218 182"
+          pathLength="1"
+          stroke-dasharray="1"
+          stroke-dashoffset="1">
+      <animate attributeName="stroke-dashoffset"
+               from="1" to="0"
+               dur="1.15s"
+               begin="0.15s"
+               fill="freeze"/>
+    </path>
+  </g>
+
+  <g transform="translate(440 52)"
+     stroke="#F4F4F4"
+     stroke-width="24"
+     stroke-linecap="butt"
+     stroke-linejoin="round">
+    <path d="M188 182 H220 C239 182 252 169 252 148 V30"
+          pathLength="1"
+          stroke-dasharray="1"
+          stroke-dashoffset="1">
+      <animate attributeName="stroke-dashoffset"
+               from="1" to="0"
+               dur="1.05s"
+               begin="0.65s"
+               fill="freeze"/>
+    </path>
+  </g>
+
+  <!-- Electric-blue highlight -->
+  <g transform="translate(440 52)"
+     fill="none"
+     stroke="#58A6FF"
+     stroke-width="5"
+     stroke-linecap="round"
+     filter="url(#glow)"
+     opacity="0.9">
+
+    <path d="M38 182 L128 30 L218 182"
+          pathLength="1"
+          stroke-dasharray="0.16 0.84">
+      <animate attributeName="stroke-dashoffset"
+               values="1;0;-1"
+               dur="4.5s"
+               repeatCount="indefinite"
+               begin="1.5s"/>
+    </path>
+
+    <path d="M188 182 H220 C239 182 252 169 252 148 V30"
+          pathLength="1"
+          stroke-dasharray="0.16 0.84">
+      <animate attributeName="stroke-dashoffset"
+               values="1;0;-1"
+               dur="4.5s"
+               repeatCount="indefinite"
+               begin="2s"/>
+    </path>
+  </g>
+
+  <!-- Identity -->
+  <g fill="#F0F6FC" text-anchor="middle">
+    <text x="600" y="292"
+          font-family="Space Grotesk, Arial, sans-serif"
+          font-size="38"
+          font-weight="700"
+          letter-spacing="4"
+          opacity="0">
+      ANIRUDH JAISWAL
+      <animate attributeName="opacity"
+               values="0;1"
+               dur="0.7s"
+               begin="1.35s"
+               fill="freeze"/>
+      <animate attributeName="y"
+               values="302;292"
+               dur="0.7s"
+               begin="1.35s"
+               fill="freeze"/>
+    </text>
+
+    <text x="600" y="326"
+          font-family="IBM Plex Mono, monospace"
+          font-size="14"
+          letter-spacing="2.4"
+          fill="#58A6FF"
+          opacity="0">
+      ASPIRING AI ENGINEER · WEB DEVELOPER · ANALYST
+      <animate attributeName="opacity"
+               values="0;1"
+               dur="0.7s"
+               begin="1.75s"
+               fill="freeze"/>
+    </text>
+
+    <text x="600" y="355"
+          font-family="IBM Plex Mono, monospace"
+          font-size="12"
+          letter-spacing="1.2"
+          fill="#8B949E"
+          opacity="0">
+      TURNING IDEAS INTO THINGS THAT WORK.
+      <animate attributeName="opacity"
+               values="0;1"
+               dur="0.7s"
+               begin="2.05s"
+               fill="freeze"/>
+    </text>
+  </g>
+
+  <!-- Small ambient pulse -->
+  <circle cx="600" cy="382" r="2" fill="#58A6FF" opacity="0.25">
+    <animate attributeName="r"
+             values="2;5;2"
+             dur="3.5s"
+             repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+             values="0.2;0.8;0.2"
+             dur="3.5s"
+             repeatCount="indefinite"/>
+  </circle>
+</svg>
