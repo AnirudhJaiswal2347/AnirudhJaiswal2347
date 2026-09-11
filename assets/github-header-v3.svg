@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" fill="none">
+  <title>Anirudh Jaiswal — animated AJ header</title>
+  <defs>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <radialGradient id="blueGlow">
+      <stop offset="0" stop-color="#58A6FF" stop-opacity=".32"/>
+      <stop offset=".55" stop-color="#58A6FF" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" stroke="#58A6FF" stroke-opacity=".055"/>
+    </pattern>
+
+    <clipPath id="ajClip">
+      <rect x="0" y="0" width="1200" height="430"/>
+    </clipPath>
+  </defs>
+
+  <!-- Midnight background -->
+  <rect width="1200" height="430" rx="18" fill="#0D1117"/>
+  <rect width="1200" height="430" rx="18" fill="url(#grid)"/>
+
+  <!-- Subtle ambient background movement -->
+  <g opacity=".22">
+    <path d="M80 72H300" stroke="#58A6FF" stroke-width="1">
+      <animate attributeName="x1" values="80;150;80" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="300;370;300" dur="8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M900 348H1120" stroke="#58A6FF" stroke-width="1">
+      <animate attributeName="x1" values="900;830;900" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1120;1050;1120" dur="10s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Clean AJ centerpiece -->
+  <g stroke="#F4F4F4" stroke-width="34" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M300 258 L390 106 L480 258"
+          stroke-dasharray="500" stroke-dashoffset="500">
+      <animate attributeName="stroke-dashoffset"
+               from="500" to="0" dur="1.15s" begin=".15s"
+               fill="freeze" calcMode="spline"
+               keySplines=".42 0 .58 1"/>
+    </path>
+  </g>
+
+  <g stroke="#F4F4F4" stroke-width="34" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M450 258 H482 C501 258 514 245 514 224 V106"
+          stroke-dasharray="300" stroke-dashoffset="300">
+      <animate attributeName="stroke-dashoffset"
+               from="300" to="0" dur=".85s" begin=".72s"
+               fill="freeze" calcMode="spline"
+               keySplines=".42 0 .58 1"/>
+    </path>
+  </g>
+
+  <!-- Very brief glow behind AJ; never crosses the mark -->
+  <ellipse cx="407" cy="190" rx="175" ry="150" fill="url(#blueGlow)" opacity="0">
+    <animate attributeName="opacity"
+             values="0;.75;0" dur="1.3s" begin="1.28s"
+             fill="freeze"/>
+  </ellipse>
+
+  <!-- Name -->
+  <g opacity="0" transform="translate(0 8)">
+    <animate attributeName="opacity" values="0;1" dur=".55s" begin="1.55s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 8;0 0" dur=".55s" begin="1.55s"
+                      fill="freeze" calcMode="spline"
+                      keySplines=".42 0 .58 1"/>
+    <text x="590" y="154"
+          fill="#F4F4F4"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="54"
+          font-weight="700"
+          letter-spacing="2">ANIRUDH JAISWAL</text>
+  </g>
+
+  <!-- Role -->
+  <g opacity="0" transform="translate(0 8)">
+    <animate attributeName="opacity" values="0;1" dur=".5s" begin="1.9s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 8;0 0" dur=".5s" begin="1.9s"
+                      fill="freeze" calcMode="spline"
+                      keySplines=".42 0 .58 1"/>
+    <text x="592" y="202"
+          fill="#58A6FF"
+          font-family="monospace"
+          font-size="19"
+          font-weight="700"
+          letter-spacing="3">AI · WEB · ANALYTICS</text>
+  </g>
+
+  <!-- Tagline -->
+  <g opacity="0" transform="translate(0 8)">
+    <animate attributeName="opacity" values="0;1" dur=".5s" begin="2.2s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate"
+                      values="0 8;0 0" dur=".5s" begin="2.2s"
+                      fill="freeze" calcMode="spline"
+                      keySplines=".42 0 .58 1"/>
+    <text x="592" y="246"
+          fill="#8B949E"
+          font-family="monospace"
+          font-size="17"
+          letter-spacing="1">TURNING IDEAS INTO THINGS THAT WORK.</text>
+  </g>
+
+  <!-- Tiny post-reveal status line -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur=".4s" begin="2.55s" fill="freeze"/>
+    <circle cx="594" cy="286" r="3" fill="#58A6FF" filter="url(#glow)">
+      <animate attributeName="r" values="3;4;3" dur="2.8s" begin="2.55s" repeatCount="indefinite"/>
+    </circle>
+    <text x="608" y="291"
+          fill="#6E7681"
+          font-family="monospace"
+          font-size="13"
+          letter-spacing="1.5">BUILD · LEARN · EXPERIMENT</text>
+  </g>
+
+  <!-- Minimal corner accents -->
+  <g stroke="#58A6FF" stroke-width="2" opacity=".55">
+    <path d="M70 360V330H100"/>
+    <path d="M1100 70H1130V100"/>
+  </g>
+</svg>
