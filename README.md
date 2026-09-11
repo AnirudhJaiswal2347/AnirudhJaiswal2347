@@ -143,26 +143,6 @@ Practical problem solving
 
 ---
 
-## GITHUB ACTIVITY
-
-<p align="center">
-
-<img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api?username=AnirudhJaiswal2347&show_icons=true&theme=github_dark&title_color=58A6FF&icon_color=58A6FF&hide_border=true&bg_color=00000000&count_private=true" alt="GitHub Stats">
-
-<img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api/top-langs/?username=AnirudhJaiswal2347&layout=compact&theme=github_dark&title_color=58A6FF&icon_color=58A6FF&hide_border=true&bg_color=00000000&langs_count=8" alt="Top Languages">
-
-</p>
-
-<p align="center">
-
-<img width="100%" src="https://github-readme-activity-graph-gold-gamma.vercel.app/graph?username=AnirudhJaiswal2347&bg_color=00000000&color=58A6FF&line=58A6FF&point=F0F6FC&area=true&hide_border=true" alt="Contribution Graph">
-
-</p>
-
----
-
-<div align="center">
-
 `BUILD · LEARN · EXPERIMENT`
 
 </div>
