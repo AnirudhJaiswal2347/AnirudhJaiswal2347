@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" fill="none">
+  <title>Anirudh Jaiswal — AJ animated GitHub header</title>
+
+  <defs>
+    <!-- Soft blue atmospheric glow behind the AJ -->
+    <radialGradient id="ajAura">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity=".34"/>
+      <stop offset="42%" stop-color="#58A6FF" stop-opacity=".16"/>
+      <stop offset="72%" stop-color="#58A6FF" stop-opacity=".055"/>
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+
+    <filter id="nodeGlow" x="-200%" y="-200%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#58A6FF" stroke-opacity=".045"/>
+    </pattern>
+
+    <clipPath id="banner">
+      <rect width="1200" height="430" rx="18"/>
+    </clipPath>
+
+    <!-- Wireframe mountain -->
+    <path id="mountain1" d="M0 365 C80 330 125 286 188 315 C242 340 266 265 325 286 C365 300 390 345 445 330"/>
+    <path id="mountain2" d="M0 392 C90 350 140 320 205 340 C255 356 300 306 350 320 C390 331 418 368 470 352"/>
+    <path id="mountain3" d="M0 412 C95 370 145 350 220 365 C275 375 315 340 365 350 C410 360 440 389 500 376"/>
+  </defs>
+
+  <g clip-path="url(#banner)">
+    <!-- Background -->
+    <rect width="1200" height="430" rx="18" fill="#0D1117"/>
+    <rect width="1200" height="430" fill="url(#grid)"/>
+
+    <!-- Very restrained ambient particles -->
+    <g fill="#58A6FF">
+      <circle cx="152" cy="118" r="1.5" opacity=".65">
+        <animate attributeName="opacity" values=".2;.8;.2" dur="4.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1018" cy="116" r="1.5" opacity=".55">
+        <animate attributeName="opacity" values=".15;.7;.15" dur="5.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1090" cy="282" r="1.2" opacity=".5">
+        <animate attributeName="opacity" values=".1;.65;.1" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="106" cy="268" r="1.2" opacity=".45">
+        <animate attributeName="opacity" values=".1;.6;.1" dur="5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Left wireframe terrain -->
+    <g stroke="#58A6FF" stroke-width="1" opacity=".17">
+      <use href="#mountain1"/>
+      <use href="#mountain2"/>
+      <use href="#mountain3"/>
+      <path d="M35 355 C110 325 150 300 190 320 C245 345 275 280 320 298 C370 316 395 352 438 340"/>
+      <path d="M65 375 C135 344 165 324 214 343 C270 365 300 310 345 329 C385 346 415 370 452 361"/>
+      <path d="M100 392 C160 360 195 346 235 360 C280 376 315 337 350 350 C390 365 420 386 450 378"/>
+    </g>
+
+    <!-- Right techno globe -->
+    <g transform="translate(1015 222)" stroke="#58A6FF" fill="none">
+      <ellipse rx="72" ry="72" stroke-opacity=".22"/>
+      <ellipse rx="72" ry="27" stroke-opacity=".18"/>
+      <ellipse rx="72" ry="48" stroke-opacity=".12"/>
+      <ellipse rx="28" ry="72" stroke-opacity=".16"/>
+      <ellipse rx="50" ry="72" stroke-opacity=".10"/>
+      <path d="M-72 0H72" stroke-opacity=".12"/>
+      <path d="M-55-46 C-20-20 20-20 55-46" stroke-opacity=".10"/>
+      <path d="M-55 46 C-20 20 20 20 55 46" stroke-opacity=".10"/>
+      <circle cx="0" cy="-72" r="2.5" fill="#58A6FF" stroke="none">
+        <animate attributeName="opacity" values=".25;1;.25" dur="3.2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Main AJ aura: brightness gently breathes -->
+    <ellipse cx="600" cy="154" rx="178" ry="145" fill="url(#ajAura)"
+             opacity=".55" filter="url(#softGlow)">
+      <animate attributeName="opacity"
+               values=".38;.68;.42;.72;.38"
+               dur="5.2s"
+               repeatCount="indefinite"
+               calcMode="spline"
+               keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"/>
+    </ellipse>
+
+    <!-- Thin orbital ring: stays OUTSIDE the logo -->
+    <g transform="translate(600 154)">
+      <circle r="126" stroke="#58A6FF" stroke-opacity=".15" stroke-width="1"/>
+      <circle r="126" stroke="#58A6FF" stroke-opacity=".55" stroke-width="1.5"
+              stroke-dasharray="42 750">
+        <animateTransform attributeName="transform"
+                           type="rotate"
+                           from="0" to="360"
+                           dur="12s"
+                           repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Orbiting node -->
+      <g>
+        <circle cx="126" cy="0" r="5" fill="#58A6FF" opacity=".18" filter="url(#nodeGlow)"/>
+        <circle cx="126" cy="0" r="2.5" fill="#DCEEFF"/>
+        <animateTransform attributeName="transform"
+                           type="rotate"
+                           from="0" to="360"
+                           dur="8s"
+                           repeatCount="indefinite"/>
+      </g>
+
+      <!-- Small alignment ticks -->
+      <path d="M0-139V-126 M0 126V139 M-139 0H-126 M126 0H139"
+            stroke="#58A6FF" stroke-opacity=".45"/>
+    </g>
+
+    <!-- Exact AJ geometry, kept completely clean -->
+    <g stroke="#F4F4F4" stroke-width="34" stroke-linecap="butt" stroke-linejoin="miter">
+      <path d="M510 258 L600 106 L690 258"/>
+    </g>
+    <g stroke="#F4F4F4" stroke-width="34" stroke-linecap="butt" stroke-linejoin="round">
+      <path d="M660 258 H692 C711 258 724 245 724 224 V106"/>
+    </g>
+
+    <!-- Very subtle AJ edge highlight -->
+    <g stroke="#FFFFFF" stroke-width="2" opacity=".35">
+      <path d="M510 258 L600 106 L690 258"/>
+      <path d="M660 258 H692 C711 258 724 245 724 224 V106"/>
+    </g>
+
+    <!-- Text block -->
+    <g font-family="Arial, Helvetica, sans-serif" fill="#F4F4F4">
+      <text x="600" y="322" text-anchor="middle"
+            font-size="36" font-weight="700" letter-spacing="6">ANIRUDH JAISWAL</text>
+      <text x="600" y="350" text-anchor="middle"
+            font-family="monospace" font-size="13" letter-spacing="2.7"
+            fill="#58A6FF">ASPIRING AI ENGINEER · WEB DEVELOPER · ANALYST</text>
+      <text x="600" y="377" text-anchor="middle"
+            font-family="monospace" font-size="12" letter-spacing="2"
+            fill="#8B949E">TURNING IDEAS INTO THINGS THAT WORK.</text>
+    </g>
+
+    <!-- Side labels -->
+    <g font-family="monospace" font-size="10" letter-spacing="1.8" fill="#8B949E">
+      <text x="48" y="62">IDEAS</text>
+      <text x="48" y="79">CODE</text>
+      <text x="48" y="96">DATA</text>
+      <text x="48" y="113">IMPACT</text>
+      <path d="M48 130H82" stroke="#58A6FF" stroke-opacity=".65"/>
+
+      <text x="1092" y="62">CURRENTLY EXPLORING</text>
+      <text x="1092" y="79">AI / ML</text>
+      <text x="1092" y="96">DATA ANALYTICS</text>
+      <text x="1092" y="113">WEB DEVELOPMENT</text>
+      <text x="1092" y="130">CREATIVE TECH</text>
+      <path d="M1092 147H1126" stroke="#58A6FF" stroke-opacity=".65"/>
+    </g>
+
+    <!-- Bottom micro-label -->
+    <g font-family="monospace" font-size="10" letter-spacing="3" fill="#6E7681">
+      <text x="600" y="407" text-anchor="middle">BUILD · LEARN · EXPERIMENT</text>
+    </g>
+
+    <!-- Corner framing -->
+    <g stroke="#58A6FF" stroke-opacity=".45" stroke-width="1.5">
+      <path d="M32 32H72 M32 32V72"/>
+      <path d="M1168 32H1128 M1168 32V72"/>
+      <path d="M32 398H72 M32 398V358"/>
+      <path d="M1168 398H1128 M1168 398V358"/>
+    </g>
+  </g>
+</svg>
