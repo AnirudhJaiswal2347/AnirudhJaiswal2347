@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/github-header.svg" width="100%" alt="Anirudh Jaiswal — animated AJ header">
+<img src="./Assets/github-header.svg" width="100%" alt="Anirudh Jaiswal — animated AJ header">
 
 </div>
 
