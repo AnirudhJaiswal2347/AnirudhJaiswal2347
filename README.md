@@ -1,14 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/AnirudhJaiswal2347/Portfolio/main/assets/AJ-logo.svg" width="110" alt="AJ Monogram">
-
-# ANIRUDH JAISWAL
-
-**ASPIRING AI ENGINEER · WEB DEVELOPER · ANALYST**
-
-*Turning ideas into things that work.*
-
-`AI` · `WEB` · `ANALYTICS`
+<img src="./assets/github-header.svg" width="100%" alt="Anirudh Jaiswal — animated AJ header">
 
 </div>
 
