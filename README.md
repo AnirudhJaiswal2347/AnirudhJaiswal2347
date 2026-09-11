@@ -1,8 +1,12 @@
 <div align="center">
 
-<img src="./Assets/github-header.svg" width="100%" alt="Anirudh Jaiswal — animated AJ header">
+<img src="./assets/github-header-v3.svg"
+     width="100%"
+     alt="Anirudh Jaiswal — animated AJ header">
 
 </div>
+
+---
 
 ---
 
