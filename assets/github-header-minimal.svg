@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" fill="none">
+  <title>Anirudh Jaiswal — minimal GitHub header</title>
+  <desc>Minimal black and red GitHub profile header using the exact AJ monogram geometry supplied by the user.</desc>
+
+  <defs>
+    <filter id="redGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <style>
+      .display { font-family: "Space Grotesk", Arial, sans-serif; font-weight: 600; letter-spacing: .08em; }
+      .mono { font-family: "JetBrains Mono", "Courier New", monospace; font-weight: 400; letter-spacing: .14em; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" fill="#050505"/>
+
+  <!-- restrained red glow -->
+  <circle cx="310" cy="180" r="62" fill="#FF453A" opacity=".08" filter="url(#redGlow)">
+    <animate attributeName="opacity" values=".05;.11;.05" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- EXACT AJ GEOMETRY -->
+  <g transform="translate(150 70) scale(.95)" stroke="#F5F5F5" stroke-width="34" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M38 182 L128 30 L218 182"/>
+  </g>
+  <g transform="translate(150 70) scale(.95)" stroke="#F5F5F5" stroke-width="34" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M188 182 H220 C239 182 252 169 252 148 V30"/>
+  </g>
+
+  <!-- single red accent -->
+  <rect x="410" y="112" width="3" height="136" rx="1.5" fill="#FF453A">
+    <animate attributeName="opacity" values=".45;1;.45" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="455" y="154" fill="#F5F5F5" font-size="43" class="display">ANIRUDH JAISWAL</text>
+  <text x="458" y="195" fill="#858585" font-size="15" class="mono">AI / ML · DATA · WEB</text>
+
+  <line x1="458" y1="226" x2="650" y2="226" stroke="#242424" stroke-width="1"/>
+  <line x1="458" y1="226" x2="505" y2="226" stroke="#FF453A" stroke-width="1.5">
+    <animate attributeName="x2" values="458;540;458" dur="5s" repeatCount="indefinite"/>
+  </line>
+
+  <text x="1080" y="315" fill="#555555" font-size="11" text-anchor="end" class="mono">AJ / 01</text>
+</svg>
