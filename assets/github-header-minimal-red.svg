@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" fill="none">
+  <title>Anirudh Jaiswal — minimal animated AJ header</title>
+  <desc>Minimal black and red GitHub profile header with the exact AJ monogram.</desc>
+
+  <defs>
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF453A" stop-opacity=".28"/>
+      <stop offset="45%" stop-color="#FF453A" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#FF453A" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="blur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="22" fill="#050505"/>
+
+  <!-- Soft red glow only behind the logo -->
+  <ellipse cx="600" cy="145" rx="230" ry="150" fill="url(#redGlow)" filter="url(#blur)">
+    <animate attributeName="opacity"
+             values=".55;1;.55"
+             dur="5.5s"
+             repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Exact AJ geometry supplied by Anirudh -->
+  <g transform="translate(440 42)"
+     stroke="#F4F4F4"
+     stroke-width="24"
+     stroke-linecap="butt"
+     stroke-linejoin="miter">
+    <path d="M38 182 L128 30 L218 182"
+          pathLength="1"
+          stroke-dasharray="1"
+          stroke-dashoffset="1">
+      <animate attributeName="stroke-dashoffset"
+               from="1" to="0"
+               dur="1.15s"
+               begin=".15s"
+               fill="freeze"/>
+    </path>
+  </g>
+
+  <g transform="translate(440 42)"
+     stroke="#F4F4F4"
+     stroke-width="24"
+     stroke-linecap="butt"
+     stroke-linejoin="round">
+    <path d="M188 182 H220 C239 182 252 169 252 148 V30"
+          pathLength="1"
+          stroke-dasharray="1"
+          stroke-dashoffset="1">
+      <animate attributeName="stroke-dashoffset"
+               from="1" to="0"
+               dur="1.05s"
+               begin=".65s"
+               fill="freeze"/>
+    </path>
+  </g>
+
+  <!-- Very subtle red edge glow, not crossing the logo -->
+  <g transform="translate(440 42)"
+     stroke="#FF453A"
+     stroke-width="3"
+     stroke-linecap="round"
+     opacity=".5">
+    <path d="M38 182 L128 30 L218 182"/>
+    <path d="M188 182 H220 C239 182 252 169 252 148 V30"/>
+    <animate attributeName="opacity"
+             values=".25;.65;.25"
+             dur="5.5s"
+             repeatCount="indefinite"/>
+  </g>
+
+  <!-- Identity -->
+  <g text-anchor="middle">
+    <text x="600" y="292"
+          fill="#F0F0F0"
+          font-family="Space Grotesk, Arial, sans-serif"
+          font-size="38"
+          font-weight="700"
+          letter-spacing="4"
+          opacity="0">
+      ANIRUDH JAISWAL
+      <animate attributeName="opacity"
+               values="0;1"
+               dur=".7s"
+               begin="1.35s"
+               fill="freeze"/>
+      <animate attributeName="y"
+               values="302;292"
+               dur=".7s"
+               begin="1.35s"
+               fill="freeze"/>
+    </text>
+
+    <text x="600" y="326"
+          fill="#FF453A"
+          font-family="JetBrains Mono, monospace"
+          font-size="14"
+          letter-spacing="2.4"
+          opacity="0">
+      ASPIRING AI ENGINEER · WEB DEVELOPER · ANALYST
+      <animate attributeName="opacity"
+               values="0;1"
+               dur=".7s"
+               begin="1.75s"
+               fill="freeze"/>
+    </text>
+
+    <text x="600" y="355"
+          fill="#858585"
+          font-family="JetBrains Mono, monospace"
+          font-size="12"
+          letter-spacing="1.2"
+          opacity="0">
+      TURNING IDEAS INTO THINGS THAT WORK.
+      <animate attributeName="opacity"
+               values="0;1"
+               dur=".7s"
+               begin="2.05s"
+               fill="freeze"/>
+    </text>
+  </g>
+</svg>

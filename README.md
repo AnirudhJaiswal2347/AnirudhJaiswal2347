@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/github-header-minimal.svg"
+<img src="./assets/github-header-minimal-red.svg"
      width="100%"
      alt="Anirudh Jaiswal">
 
